@@ -1,0 +1,133 @@
+body {
+
+	/*background-color: black;*/
+	font-family: Geneva;
+	background-image: url('http://www.tmwallpaper.com/mod/abstract-dark/1366x768/dark-abstract-wide-wallpaper-1366x768-010.jpg');
+	background-size: contain;
+
+
+}
+
+main {
+
+	width: 72%;
+	margin: 0 auto;
+	background: #2d2a2a;
+	background: rgba(38, 56, 54, 0.6);
+
+}
+
+h1{
+
+	padding-left: 10px;
+	margin-bottom: 38px;
+	text-align: center;
+	color: white;
+	/*font-family: 'Helvetica Neue';*/
+}
+
+ul{
+
+	padding: 0;
+	text-align: center;
+}
+
+
+}
+
+ul li {
+
+	display: inline-block;
+	
+
+}
+
+
+li {
+	display: inline-block;
+	padding-right: 10px;
+}
+
+img {
+
+	height: 300px;
+	float: left;
+}
+
+.club-container{
+
+	padding-left: 10px;
+    background-color: #082727;
+    border-style: solid;
+    margin-bottom: 38px;
+    color: white;
+    height: 307px;
+   
+
+}
+
+.information{
+
+	display: inline-block;
+	margin-left: 25px
+
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: yellow;
+    text-decoration: none;
+}
+
+.button{
+
+    border: solid;
+    border-width: 1px;
+    background-color: black;
+    color: yellow;
+    height: 33px;
+    width: 57px;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin-top: 12px;
+}
+
+form {
+
+	display: inline-block; 	
+}
+
+form.club-container{
+
+	width: 97%;
+	padding-top: 18px;
+
+}
+
+
+
+
+
+}
+
+
+
+

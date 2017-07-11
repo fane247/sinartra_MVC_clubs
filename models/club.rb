@@ -80,6 +80,17 @@ class Club
 
 	end
 
+	def self.delete(id)
+
+		conn = self.open_connection
+		sql = "
+		DELETE FROM clubs
+		WHERE id = #{id}
+		"
+		conn.exec(sql)
+		
+	end
+
 
 
 end

@@ -4,10 +4,16 @@
 <% @clubs.each do |club| %>
 
 <div class="club-container">
-	<h3>Name: <%=club.name%></h3>
+	<img src="/images/unknown.jpg">
+	<div class="information">
+
+	<h3>Name: <a href="clubs/<%=club.id%>"><%=club.name%></a></h3>
 	<p>Description: <%=club.description%></p>
 	<p>Rating: <%=club.rating%></p>
 	<p>Location: <%=club.location%></p>
+		
+	</div>
+
 </div>
 
 <% end %>

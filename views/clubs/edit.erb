@@ -1,6 +1,6 @@
 <h1>Edit a Club</h1>
 
-<form action="/clubs/<%= @club.id%>" method="POST">
+<form class= "club-container" action="/clubs/<%= @club.id%>" method="POST">
 
 	<input type="hidden" name="_method" value="PUT">
 	<label for="name">Name:</label>	
@@ -23,7 +23,7 @@
 	<br>
 	<input type="text" name="location" value="<%= @club.location%>">
 	<br>
-	<input type="submit" value="Edit"></input>
+	<input class="button" type="submit" value="Edit"></input>
 
 
 

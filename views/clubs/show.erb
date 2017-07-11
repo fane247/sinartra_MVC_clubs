@@ -1,9 +1,25 @@
 
 <div class="club-container">
-	<h3>Name: <%=@club.name%></h3>
-	<p>Description: <%=@club.description%></p>
-	<p>Rating: <%=@club.rating%></p>
-	<p>Location: <%=@club.location%></p>
+	<img src="/images/unknown.jpg">
+
+	<div class="infomation">
+
+		<h3>Name: <%=@club.name%></h3>
+		<p>Description: <%=@club.description%></p>
+		<p>Rating: <%=@club.rating%></p>
+		<p>Location: <%=@club.location%></p>
+	
+	</div>
+
 </div>
 
-<button href="/clubs/<%= @club.id %>/edit">Edit</button>
+<a href="/clubs/<%= @club.id %>/edit">
+	<button class="button">Edit</button>
+</a>
+
+<form method="POST" action="/clubs/<%=@club.id%>">
+	<input type="hidden" name="_method" value="DELETE">
+	<input class="button" type="submit" name="Delete" value="Delete">
+
+</form>
+

@@ -92,6 +92,12 @@ class ClubsController < Sinatra::Base
 	
 	delete "/clubs/:id"do
 
+		id = params[:id].to_i
+
+		Club.delete(id)
+
+		redirect "/clubs"
+
 		# delete
 
 	end
