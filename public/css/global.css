@@ -2,7 +2,7 @@ body {
 
 	/*background-color: black;*/
 	font-family: Geneva;
-	background-image: url('http://www.tmwallpaper.com/mod/abstract-dark/1366x768/dark-abstract-wide-wallpaper-1366x768-010.jpg');
+	background-image: url('/images/background.jpg');
 	background-size: contain;
 
 
@@ -15,6 +15,11 @@ main {
 	background: #2d2a2a;
 	background: rgba(38, 56, 54, 0.6);
 
+}
+
+nav {
+
+	padding-top: 20px;
 }
 
 h1{
@@ -50,14 +55,18 @@ li {
 
 img {
 
-	height: 300px;
+	height: 99%;
+    width: 26%;
+    max-width: 209px;
 	float: left;
+	margin-right: 18px;
 }
 
 .club-container{
 
 	padding-left: 10px;
     background-color: #082727;
+    border-color: #184e49;
     border-style: solid;
     margin-bottom: 38px;
     color: white;
@@ -69,7 +78,8 @@ img {
 .information{
 
 	display: inline-block;
-	margin-left: 25px
+	width: 65%;
+
 
 }
 

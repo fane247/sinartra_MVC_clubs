@@ -7,10 +7,10 @@ CREATE TABLE clubs (
   description VARCHAR(255),
   rating INT,
   location TEXT
-
+  image TEXT
 );
 
-INSERT INTO clubs (name , description, rating, location) VALUES ('Fabric' , 'Used to be a be a pretty banging club until they got shutdown and could only reopen if they stopped doing DNB nights and made sure that the dancefloor was illuminated like a football pitch',3,'Farringdon');
+INSERT INTO clubs (name , description, rating, location, image) VALUES ('Fabric' , 'Used to be a be a pretty banging club until they got shutdown and could only reopen if they stopped doing DNB nights and made sure that the dancefloor was illuminated like a football pitch',3,'Farringdon','/images/fabric.jpg');
 
 INSERT INTO clubs (name , description, rating, location) VALUES ('The End' , 'A classic venue, which has unfortunately been shutdown',3 ,'Tottenham Court Road');
 
