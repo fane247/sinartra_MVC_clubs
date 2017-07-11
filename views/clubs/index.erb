@@ -1,13 +1,13 @@
 
 <h1>Clubs</h1>
 
-<% @clubs.each |club| %>
+<% @clubs.each do |club| %>
 
 <div class="club-container">
-	<h3><% club.name%></h3>
-	<p><% club.description%></p>
-	<p><% club.rating%></p>
-	<p><% club.location%></p>
+	<h3>Name: <%=club.name%></h3>
+	<p>Description: <%=club.description%></p>
+	<p>Rating: <%=club.rating%></p>
+	<p>Location: <%=club.location%></p>
 </div>
 
 <% end %>

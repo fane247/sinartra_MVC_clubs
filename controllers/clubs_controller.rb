@@ -14,7 +14,7 @@ class ClubsController < Sinatra::Base
 	get "/clubs" do
 		
 		# index
-		@test = "test"
+		@clubs = Club.all
 
 		erb :"clubs/index"	
 
@@ -24,20 +24,24 @@ class ClubsController < Sinatra::Base
 
 	# new
 
-		@clubs = Club.all
-
 		erb :"clubs/new"
 
 	end
 
-	get "/:id" do
+	get "/clubs/:id" do
 
 		# show
 
+		id = params[:id].to_i
+
+		@club = Club.find(id)
+
 		erb :"clubs/show"
+
+
 	end
 
-	post "/" do
+	post "/clubs" do
 
 		club = Club.new
 		club.name = params[:name]
@@ -47,26 +51,46 @@ class ClubsController < Sinatra::Base
 
 		club.save
 
-		redirect "/"
+		redirect "/clubs"
 		# create
 
 	end
 
-	get "/:id/edit" do 
+	get "/clubs/:id/edit" do 
 
 		# edit
+
+		id = params[:id]
+		@club = Club.find(id)
+
+
+
+
 
 		erb :"clubs/edit"
 
 	end
 
-	put "/:id" do
+	put "/clubs/:id" do
+
+		id = params[:id].to_i
+
+		club = Club.find(id)
+
+		club.name = params[:name]
+		club.description = params[:description]
+		club.rating = params[:rating].to_i
+		club.location = params[:location]
+
+		club.update
+
+		redirect "/clubs"
 
 		# update
 
 	end
 	
-	delete "/:id"do
+	delete "/clubs/:id"do
 
 		# delete
 

@@ -1,6 +1,6 @@
 class Club
 
-	attr_accessor :name, :description, :rating, :location
+	attr_accessor :id, :name, :description, :rating, :location
 
 	def self.open_connection
 
@@ -12,10 +12,11 @@ class Club
 
 		club = Club.new
 
-		club.name = record['name'];
+		club.id = record['id']
+		club.name = record['name']
 		club.description = record['description']
 		club.rating = record['rating']
-		club.rating = record['location']
+		club.location = record['location']
 
 		club
 
@@ -42,12 +43,13 @@ class Club
 
 	def save
 
-		conn = self.open_connection
+		conn = Club.open_connection
 		sql = "
 		INSERT INTO clubs
 		(name , description, rating, location)
 		values('#{self.name}','#{self.description}','#{self.rating}','#{self.location}');
 		"
+		conn.exec(sql)
 
 	end
 
@@ -58,10 +60,25 @@ class Club
 		SELECT * FROM clubs
 		WHERE id=#{id};"
 
+		results = conn.exec(sql)
+
+		club = self.hydrate(results[0])
+
+
 	end
 
+	def update
+
+		conn = Club.open_connection
+		sql	= "
+		UPDATE clubs
+		set name= '#{self.name}', description='#{self.description}', rating='#{self.rating}', location='#{self.location}'
+		WHERE id=#{self.id}
+		"
+		conn.exec(sql)
 
 
+	end
 
 
 
