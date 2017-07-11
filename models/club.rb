@@ -21,6 +21,25 @@ class Club
 
 	end
 
+	def self.all
+
+		conn = self.open_connection
+		sql = "
+		SELECT * FROM clubs;
+		"
+		results = conn.exec(sql)
+
+		clubs = results.map do |club|  
+
+			self.hydrate(club)
+
+		end
+
+		clubs
+
+	end
+
+
 	def save
 
 		conn = self.open_connection

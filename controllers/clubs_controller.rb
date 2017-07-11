@@ -24,6 +24,8 @@ class ClubsController < Sinatra::Base
 
 	# new
 
+		@clubs = Club.all
+
 		erb :"clubs/new"
 
 	end

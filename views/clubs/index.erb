@@ -1,5 +1,13 @@
 
-<h1><%=@test%></h1>
+<h1>Clubs</h1>
 
-<h1>static text</h1>
+<% @clubs.each |club| %>
 
+<div class="club-container">
+	<h3><% club.name%></h3>
+	<p><% club.description%></p>
+	<p><% club.rating%></p>
+	<p><% club.location%></p>
+</div>
+
+<% end %>
